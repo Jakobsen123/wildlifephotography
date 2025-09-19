@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(147, 167, 147);
+}
+
+
+.header2 {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(24, 22, 22, 0.3);
+    z-index: 255;
+
+}
+
+.header2 h3 {
+    text-align: center;
+    margin: 0.4rem;
+    color: rgba(24, 22, 22, 0.3);
+}
+
+#header {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 213, 0);
+    font-size: 4rem;
+}
+
+.grid-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 30rem 1fr 6rem;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-areas:
+        "sidebar main main"
+        "sidebar main main"
+        "footer footer footer";
+    gap: 0.6rem;
+}
+
+.sidebar {
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: clamp(0.5rem, 2.5vw, 2rem);
+    color: whitesmoke;
+    grid-area: sidebar;
+    background-color: rgb(79, 94, 72);
+    box-shadow: 5px 5px 10px black;
+}
+
+.sidebar h3 {
+    color: rgb(128, 154, 117);
+    background-color: rgb(46, 71, 46);
+
+}
+
+.footer {
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    color: white;
+    text-decoration: underline;
+    grid-area: footer;
+    background-color: rgb(79, 94, 72);
+    box-shadow: 5px 5px 10px black;
+}
+
+.main {
+    border-radius: 0.5rem;
+    border-width: 10px;
+    border-color: rgb(79, 94, 72);
+    ;
+    border-style: solid;
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "reindeer elephant elephant"
+        "bear elephant elephant"
+        "penguin sloth monkey";
+    background-color: rgb(79, 94, 72);
+    gap: 0.7rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+.main img {
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px black;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img1 {
+    grid-area: reindeer;
+}
+
+.img2 {
+    grid-area: elephant;
+}
+
+.img3 {
+    grid-area: bear;
+}
+
+.img4 {
+    grid-area: penguin;
+}
+
+.img5 {
+
+    grid-area: sloth;
+}
+
+.img6 {
+    grid-area: monkey;
+}
+
+@keyframes scaleup {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.03;
+    }
+}
+
+@keyframes scaledow {
+    from {
+        scale: 1.03;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+
+
+.main img:hover {
+    animation: scaleup 0.2s forwards;
+}
+
+.main img:not(:hover) {
+    animation: scaledow 0.2s forwards;
+}
